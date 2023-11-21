@@ -14,29 +14,31 @@
             <div class="col-md-12 d-flex justify-content-center">
                
 
-               <div class="Calculator border border-2 border-warning" style="width: 400px; height: 390px; background-color:beige;">
-                <input type="number" id="num1" placeholder="Enter First Number" style="width: 100% ;height: 60px;text-align: right;font-size: 25px; border: 2px solid;background-color:beige; border-radius: 5px;border-color: darkorange;"/>
+               <div class="Calculator border border-2 border-warning" style="width: 400px; height: 390px; background-color:beige; box-shadow: 5px 5px 10px #efefef;">
+                <input type="text" id="result" readonly placeholder="0" style="width: 100% ;height: 60px;text-align: right;font-size: 25px; border: 2px solid;background-color:beige; border-radius: 5px;border-color: darkorange;"/>
                 <div class="buttons ms-3 mt-3" style="display: grid; grid-template-columns: repeat(4,1fr); gap: 10px;">
-                   <button class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">(</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">)</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">l</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">/</button>
-                   <button class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">7</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">8</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">9</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">x</button>
-                   <button class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">4</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">5</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">6</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">-</button>
-                   <button class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">1</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">2</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">3</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">+</button>
-                   <button class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">0</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">.</button>
-                   <button class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">exp</button>
-                   <button class="btn btn-warning"style="padding: 10px;width: 60px; height: 50px;">=</button>
+                   
+                   <button id="seven" onclick="displayData('7')" class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">7</button>
+                   <button id="eight" onclick="displayData('8')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">8</button>
+                   <button id="nine" onclick="displayData('9')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">9</button>
+                   <button id="del" onclick="removelast()" class="btn btn-warning"style="padding: 10px;width: 60px; height: 50px;">&#9003</button>
+                  
+                   <button id="four" onclick="displayData('4')" class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">4</button>
+                   <button id="five" onclick="displayData('5')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">5</button>
+                   <button id="six" onclick="displayData('6')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">6</button>
+                   <button id="sub" onclick="displayData('-')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">&#8722</button>
+                   <button id="one" onclick="displayData('1')" class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">1</button>
+                   <button id="two" onclick="displayData('2')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">2</button>
+                   <button id="three" onclick="displayData('3')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">3</button>
+                   <button id="add" onclick="displayData('+')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">+</button>
+                   <button id="zero" onclick="displayData('0')" class="btn btn-info " style="padding: 10px;width: 60px; height: 50px;">0</button>
+                   <button id="hsj" onclick="CalculatorClear('')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">CLEAR</button>
+                   <button id="div" onclick="displayData('/')" class="btn btn-info"style="padding: 10px;width: 60px; height: 50px;">/</button>
+                   <button id="mult" onclick="displayData('*')" class="btn btn-info opt"style="padding: 10px;width: 60px; height: 50px;">&#215</button>
+                   <button id="equal" onclick="CalculatorResult()" class="btn btn-warning "style="padding: 10px;width: 60px; height: 50px;">=</button>
+                   
+                   
+                  
                 </div>
                </div>
             </div>
@@ -44,4 +46,5 @@
 
     </div>
 </body>
+<script src="./main.js"></script>
 </html>
